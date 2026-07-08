@@ -2,6 +2,18 @@
 @namespace SistemaEmpleados.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-	Layout = "_Layout";
+    Layout = "_Layout";
 }
-<component type="typeof(App)" render-mode="ServerPrerendered" />
+
+<div id="blazor-app">
+    <component type="typeof(App)" render-mode="Server" />
+</div>
+
+<div id="blazor-error-ui">
+    <environment include="Staging,Production">
+        Ocurrió un error no controlado.
+        <a href="" class="reload">Recargar</a>
+    </environment>
+</div>
+
+<script src="_framework/blazor.server.js"></script>
